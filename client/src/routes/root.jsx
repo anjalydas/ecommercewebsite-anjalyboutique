@@ -27,11 +27,13 @@ function Root() {
       <header>
         <section className="flex items-center justify-between p-4 bg-gray-50 shadow-sm">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2">
-            <Link to={'/'}>
-              <img src='https://photos.google.com/photo/AF1QipMwxbDvuTO8PSf_MEggEXZ3CIbULb8vwOKRFSQy' alt="Logo" className="h-20 w-20" />
-            </Link>
-          </div>
+          <div className="header">
+      <Link to="/">
+        <img src="./logo.png" alt="Logo" className="logo-img" />
+      </Link>
+    </div>
+
+
           
 <div>
 <button
