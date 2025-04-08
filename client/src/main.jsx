@@ -9,13 +9,20 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import { Provider } from "react-redux";
 import store from "./app/store";
+import Home from "./routes/home";
 
 const router = createBrowserRouter([
   {
     path: "",
     element: <Root />,
-    errorElement: <ErrorPage />
-  },
+    errorElement: <ErrorPage />,
+  children:[
+    {
+    path:"",
+    element: <Home />,
+    }
+  ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
