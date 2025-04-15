@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import Collections from "../pages/collections";
 
 function Home() {
   return (
@@ -22,6 +23,16 @@ function Home() {
           <h2>Explore Our Latest Collection</h2>
         </div>
       </section>
+      <section>
+        <Collections/>
+      </section>
+      <section className="next-section">
+        <h2>Discover the New Season Trends</h2>
+        <p>From traditional wear to contemporary styles, we have something for every occasion.</p>
+      </section>
+
+      {/* Bottom Full-Width Image */}
+      <div className="bottom-image-cover"></div>
     </>
   );
 }

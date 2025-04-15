@@ -10,6 +10,9 @@ import ErrorPage from "./error-page";
 import { Provider } from "react-redux";
 import store from "./app/store";
 import Home from "./routes/home";
+import Category, {loader as categoryLoader} from "./pages/category";
+import Products from "./pages/products";
+import ProductPage , {loader as productLoader}from "./pages/productPage";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,23 @@ const router = createBrowserRouter([
     {
     path:"",
     element: <Home />,
-    }
+    },
+    {
+      path:"/category/:categoryId",
+      element:<Products/>,
+    },
+    {
+      path:"/category",
+      element:<Category/>,
+      loader:categoryLoader,
+    },
+    {
+      path:"/product/:productId",
+      element:<ProductPage/>,
+      loader:productLoader,
+    },
+    
+  
   ]
   }
 ]);
